@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>particles</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <div class="menubar">
+    <button class="noselect" id="button-pcShowHide">Particle Controls</button>
+    <button class="noselect" id="button-otherShowHide">Other Controls</button>
+  </div>
+  
+  <div class="tab noselect" id="particle-control">
+    <p><b>Particle Controls</b></p>
+    <br>
+    <p>Mouse Mode:</p>
+    <input type="radio" id="rad-mouseMode-click" name="rad-mouseMode" value="Click" checked>
+    <label for="rad-mouseMode-click">Click</label>
+    <input type="radio" id="rad-mouseMode-drag" name="rad-mouseMode" value="Drag">
+    <label for="rad-mouseMode-drag">Drag</label>
+    <br>
+    <p>Particle Amount:</p>
+    <input type="number" id="inp-particleAmount" min="1" max="250" value="20">
+    <br>
+    <p>Motion Type:</p>
+    <input type="radio" id="rad-motionType-linear" name="rad-motionType" value="Linear">
+    <label for="rad-motionType-linear">Linear</label>
+    <input type="radio" id="rad-motionType-outward" name="rad-motionType" value="Outward" checked>
+    <label for="rad-motionType-outward">Outward</label>
+    <br><br>
+
+    <p><u>Spread</u></p>
+    <br>
+    <p>X:</p>
+    <input type="range" id="rng-spreadX" min="0" max="100" value="0">
+    <p>Y:</p>
+    <input type="range" id="rng-spreadY" min="0" max="100" value="0">
+    <br><br>
+
+    <p><u>Duration</u></p>
+    <br>
+    <input type="range" id="rng-duration" min="10" max="300" value="60">
+    <p>Variation:</p>
+    <input type="range" id="rng-durationVar" min="0" max="150" value="0">
+    <br><br>
+
+    <p><u>Velocity</u></p>
+    <br>
+    <p>X:</p>
+    <input type="range" id="rng-velocityX" min="-10" max="10" value="0">
+    <p>Variation:</p>
+    <input type="range" id="rng-velocityXVar" min="0" max="10" value="0" step="0.5">
+    <br>
+    <p>Y:</p>
+    <input type="range" id="rng-velocityY" min="-10" max="10" value="0">
+    <p>Variation:</p>
+    <input type="range" id="rng-velocityYVar" min="0" max="10" value="0" step="0.5">
+    <br>
+    <p>Friction:</p>
+    <input type="range" id="rng-friction" min="0" max="0.25" value="0" step="0.01">
+    <br><br>
+
+    <p><u>Appearance</u></p>
+    <br>
+    <p>Size:</p>
+    <input type="range" id="rng-size" min="1" max="30" value="10">
+    <p>Variation:</p>
+    <input type="range" id="rng-sizeVar" min="0" max="30" value="0">
+    <br>
+    <p>Color:</p>
+    <input type="color" id="col-particleColor" value="#ff0000">
+    <br>
+    <p>Fade:</p>
+    <input type="radio" id="rad-fade-true" name="rad-fade" value="True" checked>
+    <label for="rad-fade-true">True</label>
+    <input type="radio" id="rad-fade-false" name="rad-fade" value="False">
+    <label for="rad-fade-false">False</label>
+    <br><br>
+  </div>
+  
+  <div class="tab noselect", id="other-controls">
+    <p><b>Other Controls</b></p>
+    <br>
+    <p>Background Color:</p>
+    <input type="color" id="col-backgroundColor" value="#303030">
+    <br>
+    <p style="font-size: 10px;">By Miles B.</p>
+  </div>
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.min.js"></script>
+  <script src="particle.js"></script>
+  <script src="main.js"></script>
+</body>
+
+</html>
